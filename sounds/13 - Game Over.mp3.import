@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/13 - Game Over.mp3-d20f19cac9f61e00c1590a080ff061b9.mp3str"
+
+[deps]
+
+source_file="res://sounds/13 - Game Over.mp3"
+dest_files=[ "res://.import/13 - Game Over.mp3-d20f19cac9f61e00c1590a080ff061b9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

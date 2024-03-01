@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GameOver.gd" type="Script" id=1]
+[ext_resource path="res://assets/NESCyrillic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sounds/13 - Game Over.mp3" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 2 )
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 254.0
+margin_bottom = 169.0
+script = ExtResource( 1 )
+StartMenu = "res://StartMenu.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 0.801
+anchor_bottom = 0.78
+margin_right = 0.322021
+margin_bottom = 0.179993
+color = Color( 0, 0, 0, 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -638.0
+margin_top = -279.0
+margin_right = 385.0
+margin_bottom = -219.0
+custom_constants/separation = 25
+alignment = 1
+
+[node name="Start" type="Button" parent="HBoxContainer"]
+margin_left = 329.0
+margin_right = 508.0
+margin_bottom = 60.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 1 )
+text = "Start Menu"
+
+[node name="Quit" type="Button" parent="HBoxContainer"]
+margin_left = 533.0
+margin_right = 694.0
+margin_bottom = 60.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 1 )
+text = "Quit Game"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 513, 299 )
+current = true
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -333.0
+margin_top = -131.5
+margin_right = 98.0
+margin_bottom = -57.5
+custom_fonts/font = SubResource( 2 )
+text = "Game Over"
+
+[node name="GameOverDeathMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[connection signal="button_down" from="HBoxContainer/Start" to="." method="_on_Start_button_down"]
+[connection signal="button_down" from="HBoxContainer/Quit" to="." method="_on_Quit_button_down"]
