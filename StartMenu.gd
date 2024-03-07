@@ -1,7 +1,7 @@
 extends Control
 
 export var Level0 = ""
-
+var playerStartPos = Vector2()
 
 
 func _on_Start_button_down():

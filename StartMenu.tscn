@@ -20,16 +20,17 @@ Level0 = "res://assets/Level0.tscn"
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 0.801
 anchor_bottom = 0.78
-margin_left = -922.0
-margin_top = -540.0
-margin_right = 1094.32
-margin_bottom = 641.18
+margin_left = -904.0
+margin_top = -536.0
+margin_right = 1112.32
+margin_bottom = 645.18
 color = Color( 0, 0, 0, 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_top = -1.0
-margin_right = 1024.0
-margin_bottom = 406.0
+margin_left = 254.0
+margin_top = 56.0
+margin_right = 768.0
+margin_bottom = 262.0
 texture = ExtResource( 1 )
 expand = true
 
@@ -38,24 +39,25 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -638.0
+margin_left = -127.0
 margin_top = -279.0
 margin_right = 385.0
 margin_bottom = -219.0
+rect_pivot_offset = Vector2( -542, -435 )
 custom_constants/separation = 25
 alignment = 1
 
 [node name="Start" type="Button" parent="HBoxContainer"]
-margin_left = 296.0
-margin_right = 540.0
+margin_left = 41.0
+margin_right = 285.0
 margin_bottom = 60.0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 1 )
 text = "Start New Game"
 
 [node name="Quit" type="Button" parent="HBoxContainer"]
-margin_left = 565.0
-margin_right = 726.0
+margin_left = 310.0
+margin_right = 471.0
 margin_bottom = 60.0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 1 )
