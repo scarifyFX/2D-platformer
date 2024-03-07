@@ -2,11 +2,11 @@
 
 [ext_resource path="res://assets/background.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/BlocksTileset.tres" type="TileSet" id=2]
-[ext_resource path="res://player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scripts/NextLevel.tscn" type="PackedScene" id=4]
-[ext_resource path="res://DieArea.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/NextLevel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/DieArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/Number.gd" type="Script" id=6]
-[ext_resource path="res://assets/NESCyrillic.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/fonts/NESCyrillic.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://sounds/02 - Running About.mp3" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
@@ -28,6 +28,7 @@ tile_data = PoolIntArray( -4849845, 0, 0, -4849844, 0, 0, -4849843, 0, 0, -48498
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( -2024, -223 )
+gameOverPath = "res://scenes/menus/GameOver.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2( 1, -53 )
@@ -53,13 +54,13 @@ script = ExtResource( 6 )
 
 [node name="NextLevel" parent="." instance=ExtResource( 4 )]
 position = Vector2( 780, -266 )
-NextLevel = "res://assets/Level2.tscn"
+NextLevel = "res://scenes/NextLevel.tscn"
 
 [node name="DieArea" parent="." instance=ExtResource( 5 )]
 position = Vector2( -64, -170 )
 scale = Vector2( -3.85481, -1.04803 )
-scenePath = "res://assets/Level1.tscn"
-gameOverPath = "res://GameOver.tscn"
+scenePath = "res://scenes/levels/Level1.tscn"
+gameOverPath = "res://scenes/menus/GameOver.tscn"
 
 [node name="BgMusic2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
@@ -68,5 +69,5 @@ autoplay = true
 [node name="DieArea2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 656, 294 )
 scale = Vector2( -21.2148, -1.04803 )
-scenePath = "res://assets/Level1.tscn"
-gameOverPath = "res://GameOver.tscn"
+scenePath = "res://scenes/levels/Level1.tscn"
+gameOverPath = "res://scenes/menus/GameOver.tscn"

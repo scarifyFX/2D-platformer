@@ -2,11 +2,11 @@
 
 [ext_resource path="res://assets/background.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/BlocksTileset.tres" type="TileSet" id=2]
-[ext_resource path="res://player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scripts/NextLevel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/NextLevel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/Number.gd" type="Script" id=5]
-[ext_resource path="res://assets/NESCyrillic.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://DieArea.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/fonts/NESCyrillic.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scenes/DieArea.tscn" type="PackedScene" id=7]
 [ext_resource path="res://sounds/01-main-theme-overworld.mp3" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
@@ -28,6 +28,7 @@ tile_data = PoolIntArray( -3866696, 0, 0, -3866695, 0, 0, -3866694, 0, 0, -38666
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( -116, -14 )
+gameOverPath = "res://scenes/menus/GameOver.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2( 1, -53 )
@@ -53,7 +54,7 @@ script = ExtResource( 5 )
 
 [node name="NextLevel" parent="." instance=ExtResource( 4 )]
 position = Vector2( -386, -372 )
-NextLevel = "res://assets/Level1.tscn"
+NextLevel = "res://scenes/levels/Level1.tscn"
 
 [node name="DieArea" parent="." instance=ExtResource( 7 )]
 position = Vector2( 244, 79 )
@@ -68,5 +69,5 @@ autoplay = true
 [node name="DieArea2" parent="." instance=ExtResource( 7 )]
 position = Vector2( -184, 350 )
 scale = Vector2( -0.800933, 1.31793 )
-scenePath = "res://assets/Level0.tscn"
-gameOverPath = "res://GameOver.tscn"
+scenePath = "res://scenes/levels/Level0.tscn"
+gameOverPath = "res://scenes/menus/GameOver.tscn"

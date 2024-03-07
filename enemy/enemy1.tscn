@@ -75,6 +75,6 @@ playback_speed = 3.0
 anims/EnemyAnimation = SubResource( 4 )
 anims/RESET = SubResource( 5 )
 
-[connection signal="body_entered" from="Attack" to="." method="_on_Die_body_entered"]
 [connection signal="body_entered" from="Attack" to="." method="_on_Attack_body_entered"]
+[connection signal="body_entered" from="Attack" to="." method="_on_Die_body_entered"]
 [connection signal="body_entered" from="Die" to="." method="_on_Die_body_entered"]

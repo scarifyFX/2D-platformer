@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Victory.gd" type="Script" id=1]
-[ext_resource path="res://assets/NESCyrillic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/Victory.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/NESCyrillic.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sounds/08 - Level Complete.mp3" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
 size = 35
 font_data = ExtResource( 2 )
 
@@ -18,13 +22,14 @@ anchor_bottom = 1.0
 margin_right = 254.0
 margin_bottom = 169.0
 script = ExtResource( 1 )
-StartMenu = "res://StartMenu.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 0.801
 anchor_bottom = 0.78
-margin_right = 0.322021
-margin_bottom = 0.179993
+margin_left = 255.0
+margin_top = 58.0
+margin_right = 156.434
+margin_bottom = 36.78
 color = Color( 0.992157, 0.478431, 0.478431, 1 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -32,27 +37,27 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -638.0
-margin_top = -279.0
-margin_right = 385.0
-margin_bottom = -219.0
+margin_left = -128.0
+margin_top = -218.0
+margin_right = 383.0
+margin_bottom = -158.0
 custom_constants/separation = 25
 alignment = 1
 
 [node name="Start" type="Button" parent="HBoxContainer"]
-margin_left = 329.0
-margin_right = 508.0
+margin_left = 73.0
+margin_right = 252.0
 margin_bottom = 60.0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 1 )
 text = "Start Menu"
 
 [node name="Quit" type="Button" parent="HBoxContainer"]
-margin_left = 533.0
-margin_right = 694.0
+margin_left = 277.0
+margin_right = 438.0
 margin_bottom = 60.0
 mouse_default_cursor_shape = 2
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Quit Game"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -64,12 +69,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -351.0
-margin_top = -136.5
-margin_right = 95.0
-margin_bottom = -62.5
+margin_left = -128.0
+margin_top = -75.5
+margin_right = 383.0
+margin_bottom = -1.5
 custom_fonts/font = SubResource( 2 )
 text = "Victory!!!"
+align = 1
 
 [node name="VictoryMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

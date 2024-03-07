@@ -1,21 +1,21 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Super_Mario_Bros_Logo.png" type="Texture" id=1]
-[ext_resource path="res://assets/NESCyrillic.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://StartMenu.gd" type="Script" id=3]
+[ext_resource path="res://scripts/StartMenu.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/NESCyrillic.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://sounds/01 - Title Screen.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
 [node name="StartMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 254.0
 margin_bottom = 169.0
-script = ExtResource( 3 )
-Level0 = "res://assets/Level0.tscn"
+script = ExtResource( 2 )
+Level0 = "res://scenes/levels/Level0.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 0.801
