@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://GameOver.gd" type="Script" id=1]
-[ext_resource path="res://assets/NESCyrillic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/GameOver.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/NESCyrillic.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sounds/13 - Game Over.mp3" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -18,13 +18,15 @@ anchor_bottom = 1.0
 margin_right = 254.0
 margin_bottom = 169.0
 script = ExtResource( 1 )
-StartMenu = "res://StartMenu.tscn"
+StartMenu = "res://scenes/menus/StartMenu.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 0.801
 anchor_bottom = 0.78
-margin_right = 0.322021
-margin_bottom = 0.179993
+margin_left = 253.0
+margin_top = 62.0
+margin_right = 156.434
+margin_bottom = 35.78
 color = Color( 0, 0, 0, 1 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -32,7 +34,7 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -638.0
+margin_left = -130.0
 margin_top = -279.0
 margin_right = 385.0
 margin_bottom = -219.0
@@ -40,16 +42,16 @@ custom_constants/separation = 25
 alignment = 1
 
 [node name="Start" type="Button" parent="HBoxContainer"]
-margin_left = 329.0
-margin_right = 508.0
+margin_left = 75.0
+margin_right = 254.0
 margin_bottom = 60.0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 1 )
 text = "Start Menu"
 
 [node name="Quit" type="Button" parent="HBoxContainer"]
-margin_left = 533.0
-margin_right = 694.0
+margin_left = 279.0
+margin_right = 440.0
 margin_bottom = 60.0
 mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 1 )
@@ -64,12 +66,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -333.0
-margin_top = -131.5
-margin_right = 98.0
-margin_bottom = -57.5
+margin_left = -130.0
+margin_top = -85.5
+margin_right = 383.0
+margin_bottom = -11.5
 custom_fonts/font = SubResource( 2 )
 text = "Game Over"
+align = 1
 
 [node name="GameOverDeathMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
