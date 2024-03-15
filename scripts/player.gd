@@ -10,6 +10,7 @@ var accel = 10
 var friction = 0.2
 export var gameOverPath = ""
 
+
 var motion = Vector2() #Är x och Y koordinater
 
 func _ready():
